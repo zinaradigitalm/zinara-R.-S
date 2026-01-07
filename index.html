@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Zinara | AI-Powered Revenue Recovery Systems & Business Automation</title>
+  <meta name="description" content="Zinara builds Revenue Recovery Systems that diagnose and repair where revenue fails after first contact. AI automation, lead capture systems, and conversion infrastructure for growing businesses.">
+  <meta name="keywords" content="revenue recovery, AI automation, business process automation, lead generation systems, conversion optimization, revenue systems, AI consulting, marketing automation, workflow automation">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zinara | Revenue Recovery Systems & AI Automation">
+  <meta property="og:description" content="Revenue doesn't fail from lack of traffic. It fails at the point of handling intent. Zinara repairs the failure point.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zinara.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zinara | Revenue Recovery Systems">
+  <meta name="twitter:description" content="Revenue fails after first contact. Zinara builds systems that recover lost conversion.">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#00043f">
+  
+  <style>
+    :root {
+      --primary: #00043f;
+      --accent: #F8CF40;
+      --text-muted: #8A8D91;
+      --white: #ffffff;
+      --bg-light: #F9FAFB;
+      --transition: 0.25s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--primary);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--primary);
+      z-index: 1000;
+      padding: 0 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      margin: 5px 0;
+      transition: var(--transition);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: var(--primary);
+      color: var(--white);
+      padding: 160px 2rem 120px;
+      margin-top: 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(248,207,64,0.05) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      font-size: 0.81rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      max-width: 920px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2vw, 1.25rem);
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(248,207,64,0.2);
+    }
+
+    .cta-primary:hover {
+      background: #E5BC2D;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(248,207,64,0.3);
+    }
+
+    .cta-secondary {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .cta-secondary:hover {
+      color: var(--accent);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 2rem;
+    }
+
+    .section-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.81rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .section-intro {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 3rem;
+    }
+
+    .section-alt {
+      background: var(--bg-light);
+    }
+
+    /* BELIEF SECTION */
+    .belief-section {
+      background: var(--white);
+    }
+
+    .belief-content {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .belief-content p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .belief-statement {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,4,63,0.08);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .service-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .service-outcome {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--primary);
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #E5E7EB;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.94rem;
+      margin-top: 1rem;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      color: var(--accent);
+      gap: 0.75rem;
+    }
+
+    /* PROCESS SECTION */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .process-step {
+      position: relative;
+    }
+
+    .process-number {
+      font-size: 7.5rem;
+      font-weight: 700;
+      color: rgba(0,4,63,0.04);
+      line-height: 1;
+      position: absolute;
+      top: -2rem;
+      left: -0.5rem;
+      z-index: 0;
+    }
+
+    .process-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-deliverable {
+      font-size: 0.875rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    /* QUALIFICATION SECTION */
+    .qualification-section {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .qualification-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .qualification-column h3 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .qualification-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .qualification-list li {
+      padding: 0.75rem 0;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .qualification-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .qualification-for li {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .qualification-not-for li {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* DIFFERENTIATION SECTION */
+    .differentiation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .differentiation-item h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .differentiation-item p {
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: var(--accent);
+      padding: 80px 2rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.125rem;
+      color: var(--primary);
+      opacity: 0.8;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 1.125rem 2.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      box-shadow: 0 6px 16px rgba(0,4,63,0.2);
+    }
+
+    .cta-button:hover {
+      background: #0A0D5C;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,4,63,0.3);
+    }
+
+    .cta-note {
+      font-size: 0.94rem;
+      color: var(--primary);
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      padding: 64px 2rem 32px;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.94rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-section h4 {
+      font-size: 0.875rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.94rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-legal a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-legal a:hover {
+      color: var(--accent);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero {
+        padding: 120px 1.5rem 80px;
+      }
+
+      section {
+        padding: 64px 1.5rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .qualification-grid,
+      .differentiation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* SCROLL BEHAVIOR */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* FOCUS STATES */
+    a:focus,
+    button:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">ZINARA</a>
+      
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How We Work</a></li>
+        <li><a href="#audit">Revenue Audit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="mobile-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container animate-in">
+      <div class="hero-label">Revenue Recovery Systems</div>
+      
+      <h1>Revenue doesn't fail from lack of demand.<br>It fails in the system that handles it.</h1>
+      
+      <p class="hero-subtitle">Zinara diagnoses where revenue breaks after first contact—inquiry to close—and rebuilds the infrastructure using AI automation and conversion systems.</p>
+      
+      <div class="cta-group">
+        <a href="#audit" class="cta-primary">Start Your Revenue Recovery Audit</a>
+        <a href="#process" class="cta-secondary">How Zinara Works →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE BELIEF SECTION -->
+  <section class="belief-section">
+    <div class="section-container">
+      <div class="belief-content">
+        <div class="section-label">The Failure Point</div>
+        
+        <h2>Businesses don't fail to attract leads.<br>They fail to convert intent after first contact.</h2>
+        
+        <p>The system breaks at the point of handling.</p>
+        
+        <p>Manual follow-up fails. Lead qualification is inconsistent. Revenue leaks between inquiry and close.</p>
+        
+        <div class="belief-statement">
+          Zinara identifies where that failure occurs, repairs the infrastructure with AI automation, and ensures revenue survives past first contact.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section-alt">
+    <div class="section-container">
+      <div class="section-label">Core Services</div>
+      <h2>What Zinara Repairs</h2>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <h3>AI-Powered Workflow Automation</h3>
+          
+          <div class="service-label">The failure point</div>
+          <p class="service-description">Operations depend on memory and manual effort. Execution collapses under scale.</p>
+          
+          <div class="service-label">What changes</div>
+          <p class="service-outcome">Operations run without human dependency. Systems hold under pressure. Teams focus on revenue.</p>
+          
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <h3>Digital Marketing Strategy</h3>
+          
+          <div class="service-label">The failure point</div>
+          <p class="service-description">Marketing activity exists. Revenue impact doesn't. Strategy is absent or unfocused.</p>
+          
+          <div class="service-label">What changes</div>
+          <p class="service-outcome">Marketing becomes a growth engine. Prospects move from interest to action predictably. Revenue impact becomes measurable.</p>
+          
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <h3>Social Media Lead Acquisition</h3>
+          
+          <div class="service-label">The failure point</div>
+          <p class="service-description">Content is produced. Audience is present. Leads don't appear. Follow-up is manual or absent.</p>
+          
+          <div class="service-label">What changes</div>
+          <p class="service-outcome">Content produces leads systematically. Lead flow becomes consistent and predictable. Follow-up happens without manual effort.</p>
+          
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <h3>AI Training & Adoption</h3>
+          
+          <div class="service-label">The failure point</div>
+          <p class="service-description">Teams don't understand AI. Adoption is confused. Productivity stays stagnant.</p>
+          
+          <div class="service-label">What changes</div>
+          <p class="service-outcome">Teams use AI confidently in daily operations. Productivity increases immediately. AI becomes a competitive advantage.</p>
+          
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <h3>Revenue Systems Design</h3>
+          
+          <div class="service-label">The failure point</div>
+          <p class="service-description">Revenue is reactive, not designed. Customer journeys are unclear. Income fluctuates unpredictably.</p>
+          
+          <div class="service-label">What changes</div>
+          <p class="service-outcome">Revenue becomes plannable through systematic design. Offers convert consistently. Income streams scale systematically.</p>
+          
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section id="process">
+    <div class="section-container">
+      <div class="section-label">Process</div>
+      <h2>Diagnosis. Design. Intervention. Recovery.</h2>
+      
+      <p class="section-intro">Zinara operates in four stages. Every engagement begins with diagnosis. Repair follows evidence, not assumption.</p>
+      
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <div class="process-content">
+            <h3 class="process-title">Diagnose</h3>
+            <p class="process-description">Where revenue fails. Why leads are lost. What systems are broken or absent.</p>
+            <p class="process-deliverable">Deliverable: Revenue Recovery Audit</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <div class="process-content">
+            <h3 class="process-title">Design</h3>
+            <p class="process-description">The infrastructure required to convert intent systematically. Workflows, automation, and conversion paths.</p>
+            <p class="process-deliverable">Deliverable: System Architecture</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <div class="process-content">
+            <h3 class="process-title">Intervene</h3>
+            <p class="process-description">Implementation of AI automation, lead systems, and revenue infrastructure. Execution without guesswork.</p>
+            <p class="process-deliverable">Deliverable: Live Systems</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <div class="process-content">
+            <h3 class="process-title">Recover</h3>
+            <p class="process-description">Revenue converts consistently. Operations scale without manual dependency. Income becomes predictable.</p>
+            <p class="process-deliverable">Deliverable: Systematic Growth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATION SECTION -->
+  <section class="qualification-section">
+    <div class="section-container">
+      <div class="section-label">Qualification</div>
+      <h2>Zinara is not for everyone.</h2>
+      
+      <div class="qualification-grid">
+        <div class="qualification-column qualification-for">
+          <h3>This is for you if:</h3>
+          <ul class="qualification-list">
+            <li>You generate demand but lose revenue in execution.</li>
+            <li>You're ready to diagnose before automating.</li>
+            <li>You want systems, not activity.</li>
+            <li>You operate with discipline, not hope.</li>
+            <li>You understand revenue is designed, not discovered.</li>
+          </ul>
+        </div>
+
+        <div class="qualification-column qualification-not-for">
+          <h3>This is not for you if:</h3>
+          <ul class="qualification-list">
+            <li>You need instant results without infrastructure.</li>
+            <li>You expect magic from tools alone.</li>
+            <li>You're not willing to change broken systems.</li>
+            <li>You prioritize activity over outcomes.</li>
+            <li>You're looking for an agency to manage campaigns.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATION SECTION -->
+  <section>
+    <div class="section-container">
+      <div class="section-label">Differentiation</div>
+      <h2>Why Zinara</h2>
+      
+      <div class="differentiation-grid">
+        <div class="differentiation-item">
+          <h3>Diagnosis Before Execution</h3>
+          <p>We don't automate broken systems. We identify failure points first, then repair infrastructure with evidence.</p>
+        </div>
+
+        <div class="differentiation-item">
+          <h3>Systems Over Tools</h3>
+          <p>Tools are inputs. Systems are outcomes. We design revenue infrastructure, not tool implementations.</p>
+        </div>
+
+        <div class="differentiation-item">
+          <h3>Operators Only</h3>
+          <p>We work with founders and teams who understand that revenue is built through discipline, not discovered through optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMARY CTA SECTION -->
+  <section id="audit" class="cta-section">
+    <div class="section-container">
+      <h2>Start with a Revenue Recovery Audit.</h2>
+      
+      <p>Identify where revenue fails, why leads are lost, and what systems must be rebuilt. Evidence before intervention.</p>
+      
+      <a href="#contact" class="cta-button">Get Your Revenue Recovery Audit</a>
+      
+      <p class="cta-note">No obligation. No sales call. Diagnosis first.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <h3>ZINARA</h3>
+          <p class="footer-tagline">Revenue Recovery Systems</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">How We Work</a></li>
+            <li><a href="#audit">Revenue Recovery Audit</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">AI Workflow Automation</a></li>
+            <li><a href="#services">Digital Marketing Strategy</a></li>
+            <li><a href="#services">Social Media Lead Acquisition</a></li>
+            <li><a href="#services">AI Training & Adoption</a></li>
+            <li><a href="#services">Revenue Systems</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@zinara.com">contact@zinara.com</a></li>
+            <li>Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Zinara. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenu?.addEventListener('click', () => {
+      navLinks?.classList.toggle('active');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card, .process-step, .differentiation-item').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
